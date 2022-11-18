@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  css: [
+    '~/assets/kendo-exemplar.css',
+  ],
+
   googleFonts: {
     families: {
       Roboto: true,
@@ -43,18 +47,26 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@formkit/nuxt',
+    // '@formkit/nuxt',
     '@nuxt/content',
     '@nuxt/image-edge',
     '@nuxt/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
+    '@nuxtjs/supabase',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'nuxt-icon',
+    'pinceau/nuxt',
   ],
+
+  pinceau: {
+    configFileName: 'tokens.config',
+  },
+
+  ssr: false,
 
   typescript: {
     shim: false,
@@ -67,6 +79,9 @@ export default defineNuxtConfig({
           additionalData: '@use "@/assets/_colors.scss" as *;',
         },
       },
+    },
+    define: {
+      'process.env.DEBUG': false,
     },
   },
 })

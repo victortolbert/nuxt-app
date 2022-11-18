@@ -11,6 +11,9 @@ useHead({
     {
       rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg',
     },
+    {
+      rel: 'stylesheet', href: '/kendo-exemplar.css',
+    },
   ],
   script: [{ children: 'console.log(\'Hello world\')' }],
 })
@@ -23,7 +26,7 @@ useHead({
 </template>
 
 <style>
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
 }
@@ -31,5 +34,5 @@ useHead({
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
-}
+} */
 </style>
