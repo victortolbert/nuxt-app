@@ -9,10 +9,19 @@ useHead({
   },
   link: [
     {
-      rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg',
+      rel: 'icon', type: 'image/svg+xml', href: '/logo.svg',
+    },
+    {
+      rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css',
+    },
+    {
+      rel: 'stylesheet', href: '/kendo-exemplar.css',
     },
   ],
-  script: [{ children: 'console.log(\'Hello world\')' }],
+  script: [
+    { src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBvOoQe7xFg-XaWj9w_l7ODbMqb4BK0B9E&libraries=places' },
+    { children: 'console.log(\'Hello world\')' },
+  ],
 })
 </script>
 

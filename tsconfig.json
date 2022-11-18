@@ -3,8 +3,7 @@
     "compilerOptions": {
         "strict": true,
         "types": [
-            "@nuxt/types",
-            "@nuxtjs/i18n"
+            "@nuxt/types"
           ]
     }
 }

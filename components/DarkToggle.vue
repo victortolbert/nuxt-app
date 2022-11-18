@@ -8,7 +8,7 @@ function toggleDark() {
 
 <template>
   <button class="focus:outline-none" @click="toggleDark">
-    <icon v-if="$colorMode.value === 'dark'" name="carbon:sun" />
-    <icon v-else name="carbon:moon" />
+    <Icon v-if="$colorMode.value === 'dark'" name="carbon:sun" />
+    <Icon v-else name="carbon:moon" />
   </button>
 </template>

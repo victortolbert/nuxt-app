@@ -15,11 +15,29 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+        sepia: 'monokai',
+      },
+    },
+  },
+
+  css: [
+    '~/assets/kendo-exemplar.css',
+  ],
+
   googleFonts: {
     families: {
       Roboto: true,
       Mulish: true,
     },
+  },
+
+  headlessui: {
+    prefix: ''
   },
 
   i18n: {
@@ -43,18 +61,27 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@formkit/nuxt',
+    // '@formkit/nuxt',
     '@nuxt/content',
-    '@nuxt/image-edge',
+    // '@nuxt/image-edge',
     '@nuxt/ui',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/i18n',
+    // '@nuxtjs/i18n',
+    '@nuxtjs/supabase',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
+    'nuxt-headlessui',
     'nuxt-icon',
+    // 'pinceau/nuxt',
   ],
+
+  pinceau: {
+    configFileName: 'tokens.config',
+  },
+
+  ssr: false,
 
   typescript: {
     shim: false,
@@ -67,6 +94,9 @@ export default defineNuxtConfig({
           additionalData: '@use "@/assets/_colors.scss" as *;',
         },
       },
+    },
+    define: {
+      'process.env.DEBUG': false,
     },
   },
 })

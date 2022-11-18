@@ -4,16 +4,16 @@ const { count, inc, dec } = useCount()
 
 <template>
   <div class="inline-flex my-3">
-    <button class="p-2 rounded-full" @click="dec()">
-      <icon name="carbon:subtract" />
+    <button class="inline-block p-2 text-white bg-teal-600 rounded-full cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50" @click="dec()">
+      <Icon class="block" name="carbon:subtract" />
     </button>
 
-    <div class="font-mono w-15 m-auto inline-block">
+    <div class="inline-block m-auto font-mono w-15">
       {{ count }}
     </div>
 
-    <button class="p-2 rounded-full" @click="inc()">
-      <icon name="carbon:add" />
+    <button class="inline-block p-2 text-white bg-teal-600 rounded-full cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50" @click="inc()">
+      <Icon class="block" name="carbon:add" />
     </button>
   </div>
 </template>
